@@ -16,12 +16,19 @@ void draw()
 {
   
   int los = (int)random(0,101);
+  
+ 
+  
+  int cr = (int)random(256);
+  int cg = (int)random(256);
+  int cb = (int)random(256);
+  stroke(cr, cg, cb);
+  strokeWeight( random(10, 20));
+  
   if( los > 50)
   {
-  int cr = (int)random(0,256);
-  int cg = (int)random(0,256);
-  int cb = (int)random(0,256);
-  fill(cr, cg, cb);
+
+  
   line(0+dx, 0+dy, r+dx, r+dy);
   } 
   else {
@@ -35,10 +42,11 @@ void draw()
     dx = 0;
     dy = dy +r;
   }
-  /*if( dy >= height)
+  if( dy >= height)
   {
-    dy =0;
-    dx =dx +r;
-  }*/
+    dx =0;
+    dy = 0;
+    background( 151);
+  }
   
 }
